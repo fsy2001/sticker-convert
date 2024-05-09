@@ -8,7 +8,7 @@ fi
 
 resolution=$2
 
-for image in original/*.png; do
+for image in trimmed/*.png; do
     if [ -f "$image" ]; then
         base_image=$(basename "$image" .png)
         sips -Z $resolution "$image" -o "$directory_name/${base_image}.png" 
